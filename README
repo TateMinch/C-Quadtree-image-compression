@@ -1,0 +1,31 @@
+The first and most obvious relation between the different qualities of an image is of storage of pixels and image quality. 
+
+All images on a screen are nothing but a collection of pixels. The image only becomes recognizable when vast amounts of 
+
+pixels are used to convey it; when there's so few pixels you can count them on your fingers, you're essentially just looking 
+ 
+at a small collection of colored cubes. Since each pixel requires storage, that means the more storage is used to store
+ 
+pixels, the higher the image quality. However, performance must always be taken into account when it comes to computing
+  
+systems. Speed is important, and constantly lugging around so much data in high resolution images, speed degrades. This
+   
+is what makes compression, the grouping of pixels so that they collectively take up less space, so important. 
+
+The lower the estimated compressed storage becomes relative to the estimated original storage, the more unrecognizable 
+
+the original image becomes. The closer it comes to the original storage, the more recognizable the image becomes. This 
+
+is the relation between compression size and image quality. In the quadTree program, this can be better visualized by 
+
+the ratio of compressed to uncompressed data: as the ratio increases, the image begins looking more like it's original
+
+form, while slowly degrading into a small pile of pixels as the ratio decreases. This also leads to the relation between
+
+the amount of quad tree nodes. Each leaf node stores a single pixel value, and data relating to what portion of the image
+
+that pixel value colors. The less nodes there are, the less seperate pixel values make up the image as a whole, but also 
+
+the less storage the image takes up. Compresssion is excellent for performance, with higher intensity leading to less
+
+storage being used but image quality being decreased.
